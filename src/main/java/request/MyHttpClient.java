@@ -7,6 +7,9 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+/**
+ * Class for making HTTP-Requests.
+ */
 public class MyHttpClient {
   private final HttpClient httpClient;
   private static MyHttpClient me;
@@ -22,18 +25,29 @@ public class MyHttpClient {
     return me;
   }
   
+  /**
+   * Makes a Get-Request to the specified URI and returns the result.
+   * @param path the remaining path after /api/HUE_APPLICATION_KEY
+   * @param responseType the expected class - e.g. {@code Light} if path is /lights/1
+   * @return the response
+   */
   public <T> MyResponse<T> sendGet(String path, Class<T> responseType) {
     HttpRequest request = createBaseRequest(path).GET().build();
     System.out.println("URI: " + request.uri());
     try {
       HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-      return new MyResponse<>(response, responseType);
+      return new MyResponse<>(response, request.uri().toString(), responseType);
     } catch (IOException | InterruptedException e) {
       e.printStackTrace();
     }
     return null;
   }
   
+  /**
+   * Builds the base part of the request that is always the same and the URI.
+   * @param path the remaining path after /api/HUE_APPLICATION_KEY
+   * @return the builder for the request
+   */
   private HttpRequest.Builder createBaseRequest(String path) {
     return HttpRequest.newBuilder()
                       .uri(createUri(path))
@@ -42,7 +56,7 @@ public class MyHttpClient {
   
   /**
    * Builds a URI
-   * @param path the remaining path after clip/v2/resource
+   * @param path the remaining path after /api/HUE_APPLICATION_KEY
    * @return the URI
    */
   private URI createUri(String path) {

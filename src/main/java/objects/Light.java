@@ -1,64 +1,49 @@
 package objects;
 
+/**
+ * Class representing the details for a lamp.
+ * Located under /api/HUE_APPLICATION_KEY/lights/<id>
+ */
 public class Light {
   public State state;
   public Update swupdate;
-  public String type,
-  name,
-  modelid,
-  manufacturername,
-  productname;
+  public String type, name, modelid, manufacturername, productname, uniqueid, swversion;
   public Capabilities capabilities;
   public LightConfig config;
-  public String uniqueid,
-  swversion;
   
   public class State {
-    boolean on;
-    int bri,
-    hue,
-    sat;
-    String effect;
+    boolean on, reachable;
+    int bri, hue, sat, ct;
     double[] xy;
-    int ct;
-    String alert,
-    colormode,
-    mode;
-    boolean reachable;
+    String effect, alert, colormode, mode;
   }
   
   public class Update {
-    String state,
-    lastinstall;
+    String state, lastinstall;
   }
   
   public class Capabilities {
     boolean certified;
     Control control;
     Streaming streaming;
-    
-    public class Control {
-      int mindimlevel,
-      maxlumen;
-      String colorgamuttype;
-      int [][] colorgamut;
-      CT ct;
-      
-      public class CT {
-        int min,
-        max;
-      }
-    }
-    
-    public class Streaming {
-      boolean renderer,
-      proxy;
-    }
+  }
+  
+  public class Control {
+    int mindimlevel, maxlumen;
+    String colorgamuttype;
+    int [][] colorgamut;
+    CT ct;
+  }
+  
+  public class CT {
+    int min, max;
+  }
+  
+  public class Streaming {
+    boolean renderer, proxy;
   }
   
   public class LightConfig {
-    String archetype,
-    function,
-    direction;
+    String archetype, function, direction;
   }
 }
