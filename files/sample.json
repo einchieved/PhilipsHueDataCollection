@@ -1,0 +1,34 @@
+[
+  {
+    "newState": "off",
+    "time": "Wed, 05 Jan 2022 17:36:49 GMT"
+  },
+  {
+    "newState": "on",
+    "time": "Wed, 05 Jan 2022 17:36:50 GMT"
+  },
+  {
+    "newState": "off",
+    "time": "Wed, 05 Jan 2022 17:36:52 GMT"
+  },
+  {
+    "newState": "on",
+    "time": "Wed, 05 Jan 2022 17:36:53 GMT"
+  },
+  {
+    "newState": "off",
+    "time": "Wed, 05 Jan 2022 17:36:54 GMT"
+  },
+  {
+    "newState": "on",
+    "time": "Wed, 05 Jan 2022 17:36:55 GMT"
+  },
+  {
+    "newState": "off",
+    "time": "Wed, 05 Jan 2022 17:36:57 GMT"
+  },
+  {
+    "newState": "on",
+    "time": "Wed, 05 Jan 2022 17:36:58 GMT"
+  }
+]

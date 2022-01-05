@@ -2,6 +2,7 @@ package request;
 
 import com.google.gson.Gson;
 import java.net.http.HttpResponse;
+import java.util.Optional;
 
 /**
  * Class that contains the response of a request.
@@ -27,6 +28,10 @@ public class MyResponse<T> {
     return response.statusCode();
   }
   
+  public Optional<String> getTime() {
+    return response.headers().firstValue("Date");
+  }
+  
   /**
    * Print the response body to the console.
    */
@@ -44,5 +49,9 @@ public class MyResponse<T> {
       obj = gson.fromJson(response.body(), typeParameterClass);
     }
     return obj;
+  }
+  
+  public String getUri() {
+    return uri;
   }
 }

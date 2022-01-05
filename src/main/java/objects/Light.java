@@ -11,6 +11,10 @@ public class Light {
   public Capabilities capabilities;
   public LightConfig config;
   
+  public boolean isOn() {
+    return state.on;
+  }
+  
   public class State {
     boolean on, reachable;
     int bri, hue, sat, ct;
@@ -29,14 +33,14 @@ public class Light {
   }
   
   public class Control {
-    int mindimlevel, maxlumen;
+    double mindimlevel, maxlumen;
     String colorgamuttype;
-    int [][] colorgamut;
+    double [][] colorgamut;
     CT ct;
   }
   
   public class CT {
-    int min, max;
+    double min, max;
   }
   
   public class Streaming {

@@ -1,11 +1,30 @@
-import objects.Light;
-import request.MyHttpClient;
-import request.MyResponse;
+import datacollection.LightStateChangeObserver;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
   
   public static void main(String[] args) {
-    MyHttpClient client = MyHttpClient.getInstance();
-    MyResponse<Light> response = client.sendGet("lights/1", Light.class);
+    List<Thread> threads = new LinkedList<>();
+    
+    // Create and assign Observers to list
+    threads.add(new Thread(new LightStateChangeObserver("lights/1")));
+    
+    // Start Observers
+    for (Thread thread : threads) {
+      thread.start();
+    }
+  
+    System.out.println("Enter anything to exit:");
+    new Scanner(System.in).nextLine();
+    System.out.println("Exiting ...");
+    
+    // Stop Observers
+    for (Thread thread : threads) {
+      thread.interrupt();
+    }
+  
+    System.out.println("Finished!");
   }
 }

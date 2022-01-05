@@ -33,7 +33,6 @@ public class MyHttpClient {
    */
   public <T> MyResponse<T> sendGet(String path, Class<T> responseType) {
     HttpRequest request = createBaseRequest(path).GET().build();
-    System.out.println("URI: " + request.uri());
     try {
       HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
       return new MyResponse<>(response, request.uri().toString(), responseType);
