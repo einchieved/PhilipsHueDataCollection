@@ -11,8 +11,8 @@ import request.MyResponse;
 public class LightStateChangeObserver implements Runnable {
   private final String lightUri;
   private final MyHttpClient client;
-  private final JsonFileHandler<LightStateChangeData> fileHandler;
-  private final JsonFileHandler<LightStateChangeData> backupFileHandler; // Two FileHandlers, due to how Gson saves the json objects. This BackupFileHandler won't have a real JSON structure.
+  private final JsonFileHandler<StateChangeData> fileHandler;
+  private final JsonFileHandler<StateChangeData> backupFileHandler; // Two FileHandlers, due to how Gson saves the json objects. This BackupFileHandler won't have a real JSON structure.
   private boolean isOn;
   
   public LightStateChangeObserver(String lightUri) {
@@ -40,7 +40,7 @@ public class LightStateChangeObserver implements Runnable {
         MyResponse<Light> response = client.sendGet(lightUri, Light.class);
         if (isOn != response.getResponseObject().isOn()) {
           boolean newIsOn = response.getResponseObject().isOn();
-          LightStateChangeData data = new LightStateChangeData(newIsOn? "on" : "off", response.getTime().orElse("time unknown"));
+          StateChangeData data = new StateChangeData(newIsOn? "on" : "off", response.getTime().orElse("time unknown"));
           fileHandler.addItem(data);
           backupFileHandler.save(data, true);
           this.isOn = newIsOn;

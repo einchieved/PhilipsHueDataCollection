@@ -1,4 +1,5 @@
 import datacollection.LightStateChangeObserver;
+import datacollection.MotionSensorStateChangeObserver;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,7 +11,8 @@ public class Main {
     
     // Create and assign Observers to list
     threads.add(new Thread(new LightStateChangeObserver("lights/1")));
-    
+    threads.add(new Thread(new MotionSensorStateChangeObserver("sensors/2")));
+
     // Start Observers
     for (Thread thread : threads) {
       thread.start();

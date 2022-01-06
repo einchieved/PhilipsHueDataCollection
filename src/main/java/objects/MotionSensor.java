@@ -20,30 +20,36 @@ public class MotionSensor {
   public String swversion;
   public String uniqueid;
   Capabilities capabilities;
+
+  public boolean isPresent() {
+    return state.presence;
+  }
+
+  class State {
+    boolean presence;
+    String lastupdated;
+  }
+
+  class Update {
+    String state, lastinstall;
+  }
+
+  class Capabilities {
+    boolean certiefied;
+    boolean primary;
+  }
+
+  class Confiq {
+    boolean on;
+    int battery;
+    boolean reachable;
+    String alert;
+    int sensitivity;
+    int sensitivitymax;
+    boolean ledindication;
+    boolean usertest;
+    ArrayList pending;
+  }
 }
 
-class State {
-  boolean presence;
-  String lastupdated;
-}
 
-class Update {
-  String state, lastinstall;
-}
-
-class Capabilities {
-  boolean certiefied;
-  boolean primary;
-}
-
-class Confiq {
-  boolean on;
-  int battery;
-  boolean reachable;
-  String alert;
-  int sensitivity;
-  int sensitivitymax;
-  boolean ledindication;
-  boolean usertest;
-  ArrayList pending;
-}
