@@ -5,7 +5,7 @@ import objects.DayLightSensor;
 import request.MyResponse;
 
 /**
- * Class for periodically checking if the motion sensor recognized a person
+ * Class for periodically checking if the lightlevel of a daylight sensor has changed.
  */
 public class DayLightChangeObserver extends AbstractObserver<DayLightSensor, DaylightStateChangeData> {
   private int lightlevel;
@@ -13,8 +13,8 @@ public class DayLightChangeObserver extends AbstractObserver<DayLightSensor, Day
   private boolean daylight;
 
   /**
-   * Creates an Observer for a single sensor.
-   * @param id the id of the light (IDs start at 1)
+   * Creates an Observer for a single daylight sensor.
+   * @param id the id of the sensor (IDs start at 1)
    * @param filename the name of the file to which the data will be saved
    */
   public DayLightChangeObserver(int id, String filename) {
