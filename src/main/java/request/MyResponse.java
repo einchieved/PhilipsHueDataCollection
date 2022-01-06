@@ -19,26 +19,7 @@ public class MyResponse<T> {
     this.uri = uri;
     this.response = response;
   }
-  
-  public String getBody() {
-    return response.body();
-  }
-  
-  public int getStatusCode() {
-    return response.statusCode();
-  }
-  
-  public Optional<String> getTime() {
-    return response.headers().firstValue("Date");
-  }
-  
-  /**
-   * Print the response body to the console.
-   */
-  public void printBody() {
-    System.out.println(response.body());
-  }
-  
+
   /**
    * Returns the object that this response represents.
    * @return the object representeed by this repsonse
@@ -50,8 +31,5 @@ public class MyResponse<T> {
     }
     return obj;
   }
-  
-  public String getUri() {
-    return uri;
-  }
+
 }

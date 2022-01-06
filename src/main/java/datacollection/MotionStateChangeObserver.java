@@ -1,5 +1,6 @@
 package datacollection;
 
+import java.time.LocalDateTime;
 import objects.MotionSensor;
 import request.MyResponse;
 
@@ -28,7 +29,7 @@ public class MotionStateChangeObserver extends AbstractObserver<MotionSensor, St
         MyResponse<MotionSensor> response = sendGet();
         if (isPresent != response.getResponseObject().isPresent()) {
           boolean newIsPresent = response.getResponseObject().isPresent();
-          StateChangeData data = new StateChangeData(newIsPresent? "present" : "absent", response.getTime().orElse("time unknown"));
+          StateChangeData data = new StateChangeData(newIsPresent? "present" : "absent", LocalDateTime.now().format(dateTimeFormatter));
           addItemForSaving(data);
           saveItem(data);
           this.isPresent = newIsPresent;

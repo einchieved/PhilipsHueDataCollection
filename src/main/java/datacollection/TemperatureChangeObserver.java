@@ -1,5 +1,6 @@
 package datacollection;
 
+import java.time.LocalDateTime;
 import objects.TemperatureSensor;
 import request.MyResponse;
 
@@ -28,7 +29,7 @@ public class TemperatureChangeObserver extends AbstractObserver<TemperatureSenso
         MyResponse<TemperatureSensor> response = sendGet();
         if (!temperature.equals(response.getResponseObject().getTemperature())) {
           String newTemperature = response.getResponseObject().getTemperature();
-          StateChangeData data = new StateChangeData(newTemperature, response.getTime().orElse("time unknown"));
+          StateChangeData data = new StateChangeData(newTemperature, LocalDateTime.now().format(dateTimeFormatter));
           addItemForSaving(data);
           saveItem(data);
           this.temperature = newTemperature;

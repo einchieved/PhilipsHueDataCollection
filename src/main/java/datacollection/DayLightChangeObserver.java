@@ -1,5 +1,6 @@
 package datacollection;
 
+import java.time.LocalDateTime;
 import objects.DayLightSensor;
 import request.MyResponse;
 
@@ -34,7 +35,7 @@ public class DayLightChangeObserver extends AbstractObserver<DayLightSensor, Day
           int newLightLevel = response.getResponseObject().getlightLevel();
           boolean newDark = response.getResponseObject().isDark();
           boolean newDayLight = response.getResponseObject().isDayLight();
-          DaylightStateChangeData data = new DaylightStateChangeData(newLightLevel, newDark, newDayLight, response.getTime().orElse("time unknown"));
+          DaylightStateChangeData data = new DaylightStateChangeData(newLightLevel, newDark, newDayLight, LocalDateTime.now().format(dateTimeFormatter));
 
           addItemForSaving(data);
           saveItem(data);

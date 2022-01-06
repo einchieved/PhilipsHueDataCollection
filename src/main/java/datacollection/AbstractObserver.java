@@ -1,6 +1,7 @@
 package datacollection;
 
 import filehandling.JsonFileHandler;
+import java.time.format.DateTimeFormatter;
 import request.MyHttpClient;
 import request.MyResponse;
 
@@ -10,6 +11,8 @@ public abstract class AbstractObserver<T, J> implements Runnable{
   private final MyHttpClient client;
   private final String uri;
   private final Class<T> type;
+
+  protected static final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
   
   public AbstractObserver(String uri, Class<T> responseClass, String filename) {
     client = MyHttpClient.getInstance();

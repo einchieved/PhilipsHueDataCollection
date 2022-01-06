@@ -1,5 +1,6 @@
 package datacollection;
 
+import java.time.LocalDateTime;
 import objects.Light;
 import request.MyResponse;
 
@@ -28,7 +29,7 @@ public class LightStateChangeObserver extends AbstractObserver<Light, StateChang
         MyResponse<Light> response = sendGet();
         if (isOn != response.getResponseObject().isOn()) {
           boolean newIsOn = response.getResponseObject().isOn();
-          StateChangeData data = new StateChangeData(newIsOn? "on" : "off", response.getTime().orElse("time unknown"));
+          StateChangeData data = new StateChangeData(newIsOn? "on" : "off", LocalDateTime.now().format(dateTimeFormatter));
           addItemForSaving(data);
           saveItem(data);
           this.isOn = newIsOn;
