@@ -1,6 +1,6 @@
 package objects;
 
-public class LightSensor extends Sensor{
+public class DayLightSensor extends Sensor{
 
   public State state;
 
@@ -22,7 +22,4 @@ public class LightSensor extends Sensor{
     boolean daylight;
     String lastupdated;
   }
-
-
-
 }

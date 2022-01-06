@@ -1,5 +1,7 @@
+import datacollection.DayLightChangeObserver;
 import datacollection.LightStateChangeObserver;
-import datacollection.MotionSensorStateChangeObserver;
+import datacollection.MotionStateChangeObserver;
+import datacollection.TemperatureChangeObserver;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +13,10 @@ public class Main {
     
     // Create and assign Observers to list
     threads.add(new Thread(new LightStateChangeObserver(1, "LightStateChanged")));
-    threads.add(new Thread(new MotionSensorStateChangeObserver(2, "MotionSensorStateChanged")));
+    threads.add(new Thread(new MotionStateChangeObserver(2, "MotionStateChanged")));
+    threads.add(new Thread(new DayLightChangeObserver(3, "DayLightChanged")));
+    threads.add(new Thread(new TemperatureChangeObserver(4, "TemperatureChanged")));
+
 
     // Start Observers
     for (Thread thread : threads) {

@@ -6,7 +6,7 @@ import request.MyResponse;
 /**
  * Class for periodically checking if the motion sensor recognized a person
  */
-public class MotionSensorStateChangeObserver extends AbstractObserver<MotionSensor, StateChangeData> {
+public class MotionStateChangeObserver extends AbstractObserver<MotionSensor, StateChangeData> {
   private boolean isPresent;
   
   /**
@@ -14,7 +14,7 @@ public class MotionSensorStateChangeObserver extends AbstractObserver<MotionSens
    * @param id the id of the light (IDs start at 1)
    * @param filename the name of the file to which the data will be saved
    */
-  public MotionSensorStateChangeObserver(int id, String filename) {
+  public MotionStateChangeObserver(int id, String filename) {
     super("sensors/" + id, MotionSensor.class, filename);
     MyResponse<MotionSensor> response = sendGet();
     this.isPresent = response.getResponseObject().isPresent();

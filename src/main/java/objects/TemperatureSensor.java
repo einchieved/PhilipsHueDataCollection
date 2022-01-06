@@ -4,8 +4,8 @@ public class TemperatureSensor extends Sensor{
 
   public State state;
 
-  public int isPresent() {
-    return state.temperature;
+  public String getTemperature() {
+    return String.valueOf(state.temperature);
   }
 
   class State {
