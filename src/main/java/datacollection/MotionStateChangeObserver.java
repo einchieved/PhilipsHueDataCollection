@@ -4,14 +4,14 @@ import objects.MotionSensor;
 import request.MyResponse;
 
 /**
- * Class for periodically checking if the motion sensor recognized a person
+ * Class for periodically checking if the motion sensor recognized a person.
  */
 public class MotionStateChangeObserver extends AbstractObserver<MotionSensor, StateChangeData> {
   private boolean isPresent;
   
   /**
-   * Creates an Observer for a single sensor.
-   * @param id the id of the light (IDs start at 1)
+   * Creates an Observer for a single motion sensor.
+   * @param id the id of the sensor (IDs start at 1)
    * @param filename the name of the file to which the data will be saved
    */
   public MotionStateChangeObserver(int id, String filename) {

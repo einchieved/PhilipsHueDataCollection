@@ -1,7 +1,7 @@
 package datacollection;
 
 /**
- * Class holding information about state changes of a light.
+ * Class holding information about state changes of a light and some sensors.
  * Used for saving information in a JSON file.
  */
 public class StateChangeData {

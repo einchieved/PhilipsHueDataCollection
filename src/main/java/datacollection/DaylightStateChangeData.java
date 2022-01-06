@@ -1,5 +1,9 @@
 package datacollection;
 
+/**
+ * Class holding information about state changes of a daylight sensor.
+ * Used for saving information in a JSON file.
+ */
 public class DaylightStateChangeData {
   private final int lightlevel;
   private final boolean dark;
