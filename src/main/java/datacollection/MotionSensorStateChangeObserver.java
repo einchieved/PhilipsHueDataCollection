@@ -1,19 +1,12 @@
 package datacollection;
 
-import filehandling.JsonFileHandler;
 import objects.MotionSensor;
-import request.MyHttpClient;
 import request.MyResponse;
 
 /**
  * Class for periodically checking if the motion sensor recognized a person
  */
-public class MotionSensorStateChangeObserver implements Runnable {
-
-  private final String motionSensorUri;
-  private final MyHttpClient client;
-  private final JsonFileHandler<StateChangeData> fileHandler;
-  private final JsonFileHandler<StateChangeData> backupFileHandler; // Two FileHandlers, due to how Gson saves the json objects. This BackupFileHandler won't have a real JSON structure.
+public class MotionSensorStateChangeObserver extends AbstractObserver<MotionSensor, StateChangeData> {
   private boolean isPresent;
   
   /**
@@ -22,11 +15,8 @@ public class MotionSensorStateChangeObserver implements Runnable {
    * @param filename the name of the file to which the data will be saved
    */
   public MotionSensorStateChangeObserver(int id, String filename) {
-    this.motionSensorUri = "sensors/" + id;
-    fileHandler = new JsonFileHandler<>(filename);
-    backupFileHandler = new JsonFileHandler<>(filename + ".backup");
-    client = MyHttpClient.getInstance();
-    MyResponse<MotionSensor> response = client.sendGet(motionSensorUri, MotionSensor.class);
+    super("sensors/" + id, MotionSensor.class, filename);
+    MyResponse<MotionSensor> response = sendGet();
     this.isPresent = response.getResponseObject().isPresent();
   }
 
@@ -35,20 +25,20 @@ public class MotionSensorStateChangeObserver implements Runnable {
     while (!Thread.currentThread().isInterrupted()) {
       try {
         Thread.sleep(1000);//60000
-        MyResponse<MotionSensor> response = client.sendGet(motionSensorUri, MotionSensor.class);
+        MyResponse<MotionSensor> response = sendGet();
         if (isPresent != response.getResponseObject().isPresent()) {
           boolean newIsPresent = response.getResponseObject().isPresent();
           StateChangeData data = new StateChangeData(newIsPresent? "present" : "absent", response.getTime().orElse("time unknown"));
-          fileHandler.addItem(data);
-          backupFileHandler.save(data, true);
+          addItemForSaving(data);
+          saveItem(data);
           this.isPresent = newIsPresent;
         }
       } catch (InterruptedException ignored) {
         // used to stop the thread
-        fileHandler.save();
+        saveAddedItems();
         return;
       }
     }
-    fileHandler.save();
+    saveAddedItems();
   }
 }
