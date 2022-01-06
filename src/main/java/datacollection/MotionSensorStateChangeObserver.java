@@ -15,11 +15,16 @@ public class MotionSensorStateChangeObserver implements Runnable {
   private final JsonFileHandler<StateChangeData> fileHandler;
   private final JsonFileHandler<StateChangeData> backupFileHandler; // Two FileHandlers, due to how Gson saves the json objects. This BackupFileHandler won't have a real JSON structure.
   private boolean isPresent;
-
-  public MotionSensorStateChangeObserver(String motionSensorUri) {
-    this.motionSensorUri = motionSensorUri;
-    fileHandler = new JsonFileHandler<>("MotionSensorStateChanged.json");
-    backupFileHandler = new JsonFileHandler<>("MotionSensorStateChanged.backup.json");
+  
+  /**
+   * Creates an Observer for a single sensor.
+   * @param id the id of the light (IDs start at 1)
+   * @param filename the name of the file to which the data will be saved
+   */
+  public MotionSensorStateChangeObserver(int id, String filename) {
+    this.motionSensorUri = "sensors/" + id;
+    fileHandler = new JsonFileHandler<>(filename);
+    backupFileHandler = new JsonFileHandler<>(filename + ".backup");
     client = MyHttpClient.getInstance();
     MyResponse<MotionSensor> response = client.sendGet(motionSensorUri, MotionSensor.class);
     this.isPresent = response.getResponseObject().isPresent();

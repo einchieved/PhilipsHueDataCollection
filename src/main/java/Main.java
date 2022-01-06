@@ -10,8 +10,8 @@ public class Main {
     List<Thread> threads = new LinkedList<>();
     
     // Create and assign Observers to list
-    threads.add(new Thread(new LightStateChangeObserver("lights/1")));
-    threads.add(new Thread(new MotionSensorStateChangeObserver("sensors/2")));
+    threads.add(new Thread(new LightStateChangeObserver(1, "LightStateChanged")));
+    threads.add(new Thread(new MotionSensorStateChangeObserver(2, "MotionSensorStateChanged")));
 
     // Start Observers
     for (Thread thread : threads) {

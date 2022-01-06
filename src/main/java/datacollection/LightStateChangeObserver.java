@@ -15,21 +15,18 @@ public class LightStateChangeObserver implements Runnable {
   private final JsonFileHandler<StateChangeData> backupFileHandler; // Two FileHandlers, due to how Gson saves the json objects. This BackupFileHandler won't have a real JSON structure.
   private boolean isOn;
   
-  public LightStateChangeObserver(String lightUri) {
-    this.lightUri = lightUri;
-    fileHandler = new JsonFileHandler<>("lightStateChanged.json");
-    backupFileHandler = new JsonFileHandler<>("lightStateChanged.backup.json");
+  /**
+   * Creates an Observer for a single light.
+   * @param id the id of the light (IDs start at 1)
+   * @param filename the name of the file to which the data will be saved
+   */
+  public LightStateChangeObserver(int id, String filename) {
+    this.lightUri = "lights/" + id;
+    fileHandler = new JsonFileHandler<>(filename);
+    backupFileHandler = new JsonFileHandler<>(filename + ".backup");
     client = MyHttpClient.getInstance();
     MyResponse<Light> response = client.sendGet(lightUri, Light.class);
     this.isOn = response.getResponseObject().isOn();
-  }
-  
-  public LightStateChangeObserver(String lightUri, boolean isOn) {
-    this.lightUri = lightUri;
-    backupFileHandler = new JsonFileHandler<>("lightStateChanged.backup.json");
-    fileHandler = new JsonFileHandler<>("lightStateChanged.json");
-    client = MyHttpClient.getInstance();
-    this.isOn = isOn;
   }
   
   @Override
