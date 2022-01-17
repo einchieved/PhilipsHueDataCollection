@@ -47,7 +47,7 @@ public abstract class AbstractObserver<T, J> implements Runnable{
   
   /**
    * Save all items that have been added via the {@code addItem} method.
-   * This mehtod will create a proper JSON structure for multiple elements.
+   * This method will create a proper JSON structure for multiple elements.
    */
   protected void saveAddedItems() {
     fileHandler.save();

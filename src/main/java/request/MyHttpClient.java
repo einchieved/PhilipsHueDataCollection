@@ -35,7 +35,7 @@ public class MyHttpClient {
     HttpRequest request = createBaseRequest(path).GET().build();
     try {
       HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-      return new MyResponse<>(response, request.uri().toString(), responseType);
+      return new MyResponse<>(response, responseType);
     } catch (IOException | InterruptedException e) {
       e.printStackTrace();
     }

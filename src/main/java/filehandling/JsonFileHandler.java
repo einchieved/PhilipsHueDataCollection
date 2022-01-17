@@ -35,7 +35,7 @@ public class JsonFileHandler<T> {
   
   /**
    * Save all items that have been added via the {@code addItem} method.
-   * This mehtod will create a proper JSON structure for multiple elements.
+   * This method will create a proper JSON structure for multiple elements.
    */
   public void save() {
     try {

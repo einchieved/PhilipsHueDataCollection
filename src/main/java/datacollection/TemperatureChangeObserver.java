@@ -11,7 +11,7 @@ public class TemperatureChangeObserver extends AbstractObserver<TemperatureSenso
   private String temperature;
 
   /**
-   * Creates an Observer for a single temeprature sensor.
+   * Creates an Observer for a single temperature sensor.
    * @param id the id of the light (IDs start at 1)
    * @param filename the name of the file to which the data will be saved
    */

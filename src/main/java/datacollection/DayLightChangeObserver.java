@@ -5,7 +5,7 @@ import objects.DayLightSensor;
 import request.MyResponse;
 
 /**
- * Class for periodically checking if the lightlevel of a daylight sensor has changed.
+ * Class for periodically checking if the light level of a daylight sensor has changed.
  */
 public class DayLightChangeObserver extends AbstractObserver<DayLightSensor, DaylightStateChangeData> {
   private int lightlevel;
