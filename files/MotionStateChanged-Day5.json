@@ -1,0 +1,442 @@
+[
+  {
+    "newState": "present",
+    "time": "12.01.2022 08:36:42"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 08:36:56"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 08:38:25"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 08:38:40"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 10:26:42"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 10:26:56"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 10:27:15"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 10:27:33"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 10:27:44"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 10:27:54"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 10:28:14"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 10:29:13"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 10:29:14"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 10:29:48"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 10:30:22"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 10:30:32"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 10:30:48"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 10:31:04"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 10:31:07"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 10:31:45"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 10:31:49"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 10:32:03"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:03:46"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:03:56"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:04:29"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:04:54"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:05:42"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:05:59"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:25:31"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:25:46"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:25:51"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:26:05"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:31:05"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:31:16"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:31:53"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:32:03"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:46:53"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:47:03"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:47:13"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:47:27"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:51:03"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:51:13"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 11:51:53"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 11:52:02"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 12:43:21"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 12:43:46"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 12:44:04"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 12:44:22"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 12:44:36"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 12:45:44"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 13:53:21"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 13:53:35"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 14:17:46"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 14:18:09"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 16:21:27"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 16:21:38"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 16:23:41"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 16:23:51"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 16:23:59"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 16:24:23"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 16:40:05"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 16:40:14"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 16:40:53"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 16:41:17"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 16:41:20"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 16:41:34"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 17:25:25"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 17:25:41"
+  },
+    {
+    "newState": "present",
+    "time": "12.01.2022 20:18:07"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:18:22"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 20:19:01"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:19:15"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 20:35:02"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:35:12"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 20:35:13"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:35:32"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 20:36:20"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:36:34"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 20:36:58"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:37:08"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 20:38:04"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:38:18"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 20:38:41"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:38:51"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 20:39:24"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:39:38"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 20:46:26"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:46:45"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 20:48:36"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 20:48:54"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 21:42:47"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 21:42:57"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 21:43:36"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 21:43:50"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 22:12:08"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 22:12:22"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 22:13:04"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 22:13:18"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 22:39:40"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 22:40:09"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 22:41:28"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 22:41:37"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 22:42:31"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 22:42:41"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 22:44:35"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 22:44:45"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 23:52:22"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 23:52:37"
+  },
+  {
+    "newState": "present",
+    "time": "12.01.2022 23:53:05"
+  },
+  {
+    "newState": "absent",
+    "time": "12.01.2022 23:53:19"
+  }
+]
